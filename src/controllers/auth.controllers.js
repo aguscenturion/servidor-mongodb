@@ -22,7 +22,7 @@ export const login = async (req, res) => {
     httpOnly: true,
     maxAge: 1000 * 60 * 60, // 1h
     secure: true, // habilitar en producción
-    // sameSite: "strict",
+    sameSite: "none",
   });
 
   return res.json({ message: "Login exitoso" });
